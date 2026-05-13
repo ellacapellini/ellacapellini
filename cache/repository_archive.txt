@@ -1,0 +1,6 @@
+This file is used to store data from repositories that have since been deleted or are no longer accessible.
+Each line (after this comment block) follows the format:
+  sha256_hash  total_commits  my_commits  loc_added  loc_deleted
+If you have contributed to repos that were later deleted, add them here manually.
+The comment block is exactly 7 lines (lines 1-7).
+This is line 7.

@@ -1,0 +1,58 @@
+name: Update README stats
+
+on:
+  push:
+    branches: [main, master]
+  schedule:
+    # Runs every day at 00:30 UTC
+    - cron: '30 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('cache/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Cache LOC data
+        uses: actions/cache@v4
+        with:
+          path: cache/
+          key: ${{ runner.os }}-loc-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-loc-
+
+      - name: Install dependencies
+        run: pip install -r cache/requirements.txt
+
+      - name: Run updater
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          # 👇 Replace with your GitHub username
+          USER_NAME: jar-jar-binks-comits
+        run: python today.py
+
+      - name: Commit and push updated SVGs
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add dark_mode.svg light_mode.svg
+          git diff --staged --quiet || git commit -m "chore: update profile stats [skip ci]"
+          git push
