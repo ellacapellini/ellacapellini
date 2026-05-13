@@ -22,10 +22,6 @@ QUERY_COUNT = {
 
 
 def daily_readme(birthday):
-    """
-    Returns the length of time since I was born
-    e.g. 'XX years, XX months, XX days'
-    """
     diff = relativedelta.relativedelta(datetime.datetime.today(), birthday)
     return '{} {}, {} {}, {} {}{}'.format(
         diff.years,  'year'  + format_plural(diff.years),
@@ -280,10 +276,6 @@ def stars_counter(data):
 
 
 def visitor_getter(username):
-    """
-    Fetches the current profile view count from komarev.com by parsing
-    the number out of the SVG badge they return.
-    """
     try:
         url = f'https://komarev.com/ghpvc/?username={username}&style=flat-square'
         resp = requests.get(url, timeout=10)
@@ -304,9 +296,6 @@ def visitor_getter(username):
 
 def svg_overwrite(filename, age_data, commit_data, star_data, repo_data,
                   contrib_data, follower_data, loc_data, visitor_data):
-    """
-    Parse SVG files and update all dynamic elements.
-    """
     tree = etree.parse(filename)
     root = tree.getroot()
     justify_format(root, 'commit_data',   commit_data,   22)
@@ -402,10 +391,7 @@ def formatter(query_type, difference, funct_return=False, whitespace=0):
 
 
 if __name__ == '__main__':
-    """
-    Ella Capellini — GitHub profile README auto-updater
-    Adapted from Andrew Grant (Andrew6rant), 2022-2025
-    """
+
     print('Calculation times:')
 
     user_data, user_time = perf_counter(user_getter, USER_NAME)
