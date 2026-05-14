@@ -65,7 +65,7 @@
   <text x="28" y="456" font-size="12" fill="#4f46e5">Lines of Code<tspan fill="#c8d1da" id="loc_data_dots">.........</tspan><tspan fill="#24292f"> </tspan><tspan fill="#24292f" id="loc_data">0</tspan><tspan fill="#24292f"> (</tspan><tspan fill="#1a7f37" id="loc_add">0</tspan><tspan fill="#57606a">, </tspan><tspan fill="#cf222e" id="loc_del">0</tspan><tspan fill="#24292f">)</tspan></text>
 
   <!-- visitor count -->
-  <text x="28" y="473" font-size="12" fill="#4f46e5">Curious minds visited<tspan fill="#c8d1da" id="visitor_data_dots">...</tspan><tspan fill="#4f46e5"> </tspan><tspan fill="#4f46e5" id="visitor_data">0</tspan></text>
+  <text x="28" y="473" font-size="12" fill="#4f46e5">Curious minds visited<tspan fill="#c8d1da" id="visitor_data_dots">...</tspan><tspan fill="#4f46e5"> </tspan><tspan fill="#24292f" font-size="13" font-weight="700" id="visitor_data">0</tspan></text>
 
   <!-- swatches -->
   <rect x="28"  y="493" width="16" height="16" rx="2" fill="#4f46e5"/>
