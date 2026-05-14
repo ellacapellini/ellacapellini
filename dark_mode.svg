@@ -62,10 +62,10 @@
   <text x="244" y="439" font-size="12" fill="#c9d1d9" id="follower_data">0</text>
 
   <!-- LOC: all in one text element so add/del flow after the total naturally -->
-  <text x="28" y="456" font-size="12" fill="#7c8fdb">Lines of Code<tspan fill="#21262d" id="loc_data_dots">.........</tspan><tspan fill="#c9d1d9" id="loc_data">0</tspan><tspan fill="#c9d1d9"> (</tspan><tspan fill="#3fb950" id="loc_add">0</tspan><tspan fill="#8b949e">, </tspan><tspan fill="#f85149" id="loc_del">0</tspan><tspan fill="#c9d1d9">)</tspan></text>
+  <text x="28" y="456" font-size="12" fill="#7c8fdb">Lines of Code<tspan fill="#21262d" id="loc_data_dots">.........</tspan><tspan fill="#c9d1d9"> </tspan><tspan fill="#c9d1d9" id="loc_data">0</tspan><tspan fill="#c9d1d9"> (</tspan><tspan fill="#3fb950" id="loc_add">0</tspan><tspan fill="#8b949e">, </tspan><tspan fill="#f85149" id="loc_del">0</tspan><tspan fill="#c9d1d9">)</tspan></text>
 
   <!-- visitor count -->
-  <text x="28" y="473" font-size="12" fill="#7c8fdb">Curious minds visited<tspan fill="#21262d" id="visitor_data_dots">...</tspan><tspan fill="#7c8fdb" id="visitor_data">0</tspan></text>
+  <text x="28" y="473" font-size="12" fill="#7c8fdb">Curious minds visited<tspan fill="#21262d" id="visitor_data_dots">...</tspan><tspan fill="#7c8fdb"> </tspan><tspan fill="#7c8fdb" id="visitor_data">0</tspan></text>
 
   <!-- swatches -->
   <rect x="28"  y="493" width="16" height="16" rx="2" fill="#7c8fdb"/>
