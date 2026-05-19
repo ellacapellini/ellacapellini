@@ -19,7 +19,7 @@
 
   <!-- system -->
   <text x="28" y="70" font-size="12" fill="#7c8fdb">OS<tspan fill="#21262d">..................</tspan><tspan fill="#c9d1d9">macOS + Linux</tspan></text>
-  <text x="28" y="87" font-size="12" fill="#7c8fdb">Uptime<tspan fill="#21262d">................</tspan><tspan fill="#c9d1d9" id="age_data">24 years, 4 months, 8 days</tspan></text>
+  <text x="28" y="87" font-size="12" fill="#7c8fdb">Uptime<tspan fill="#21262d">................</tspan><tspan fill="#c9d1d9" id="age_data">24 years, 4 months, 9 days</tspan></text>
   <text x="28" y="104" font-size="12" fill="#7c8fdb">Host<tspan fill="#21262d">..................</tspan><tspan fill="#c9d1d9">UZH · ETH Zürich · U. Oldenburg</tspan></text>
   <text x="28" y="121" font-size="12" fill="#7c8fdb">Kernel<tspan fill="#21262d">................</tspan><tspan fill="#c9d1d9">Researcher</tspan></text>
   <text x="28" y="138" font-size="12" fill="#7c8fdb">IDE<tspan fill="#21262d">...................</tspan><tspan fill="#c9d1d9">VSCode + Neovim</tspan></text>
