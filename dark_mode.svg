@@ -9,66 +9,56 @@
     </style>
   </defs>
 
-  <rect width="760" height="460" rx="8" fill="#0d1117"/>
+  <rect width="820" height="490" rx="8" fill="#0d1117"/>
 
   <!-- user@host -->
-  <text x="28" y="36" font-size="15" font-weight="700" fill="#7c8fdb">ella</text>
-  <text x="71" y="36" font-size="15" font-weight="700" fill="#c9d1d9">@</text>
-  <text x="86" y="36" font-size="15" font-weight="700" fill="#7c8fdb">capellini</text>
-  <text x="28" y="52" font-size="11" fill="#21262d">─────────────────────────────────────────────────────────────────────────────────</text>
+  <text x="28" y="38" font-size="17" font-weight="700" fill="#7c8fdb">ella</text>
+  <text x="76" y="38" font-size="17" font-weight="700" fill="#c9d1d9">@</text>
+  <text x="893" y="38" font-size="17" font-weight="700" fill="#7c8fdb">capellini</text>
+  <text x="28" y="56" font-size="11" fill="#21262d">─────────────────────────────────────────────────────────────────────────────────</text>
 
   <!-- system -->
-  <text x="28" y="70" font-size="12" fill="#7c8fdb">OS<tspan fill="#21262d">..................</tspan><tspan fill="#c9d1d9">macOS + Linux</tspan></text>
-  <text x="28" y="87" font-size="12" fill="#7c8fdb">Uptime<tspan fill="#21262d">................</tspan><tspan fill="#c9d1d9" id="age_data">24 years, 5 months, 18 days</tspan></text>
-  <text x="28" y="104" font-size="12" fill="#7c8fdb">Host<tspan fill="#21262d">..................</tspan><tspan fill="#c9d1d9">UZH · ETH Zürich · U. Oldenburg</tspan></text>
-  <text x="28" y="121" font-size="12" fill="#7c8fdb">Kernel<tspan fill="#21262d">................</tspan><tspan fill="#c9d1d9">Researcher</tspan></text>
-  <text x="28" y="138" font-size="12" fill="#7c8fdb">IDE<tspan fill="#21262d">...................</tspan><tspan fill="#c9d1d9">VSCode + Neovim</tspan></text>
+  <text x="28" y="76" font-size="13.5" fill="#7c8fdb">OS<tspan fill="#21262d">..................</tspan><tspan fill="#c9d1d9">macOS + Linux</tspan></text>
+  <text x="28" y="95" font-size="13.5" fill="#7c8fdb">Uptime<tspan fill="#21262d">................</tspan><tspan fill="#c9d1d9" id="age_data">24 years, 5 months, 18 days</tspan></text>
+  <text x="28" y="114" font-size="13.5" fill="#7c8fdb">Host<tspan fill="#21262d">..................</tspan><tspan fill="#c9d1d9">UZH · ETH Zürich · U. Oldenburg</tspan></text>
+  <text x="28" y="133" font-size="13.5" fill="#7c8fdb">Kernel<tspan fill="#21262d">................</tspan><tspan fill="#c9d1d9">Researcher</tspan></text>
+  <text x="28" y="152" font-size="13.5" fill="#7c8fdb">IDE<tspan fill="#21262d">...................</tspan><tspan fill="#c9d1d9">VSCode + Neovim</tspan></text>
 
   <!-- languages -->
-  <text x="28" y="158" font-size="11" fill="#21262d">── Languages ────────────────────────────────────────────────────────────────────</text>
-  <text x="28" y="175" font-size="12" fill="#7c8fdb">Languages.Programming<tspan fill="#21262d">.....</tspan><tspan fill="#c9d1d9">Python · MATLAB · JavaScript · Julia</tspan></text>
-  <text x="28" y="192" font-size="12" fill="#7c8fdb">Languages.Computer<tspan fill="#21262d">........</tspan><tspan fill="#c9d1d9">HTML · CSS · LaTeX · YAML</tspan></text>
-  <text x="28" y="209" font-size="12" fill="#7c8fdb">Languages.Real<tspan fill="#21262d">............</tspan><tspan fill="#c9d1d9">Italian · English · German</tspan></text>
-  <text x="28" y="226" font-size="12" fill="#7c8fdb">Languages.Dead<tspan fill="#21262d">............</tspan><tspan fill="#f97316">Ancient Greek · Latin · Linear B · </tspan><tspan fill="#8b949e">Cuneiform (learning)</tspan></text>
+  <text x="28" y="174" font-size="11" fill="#21262d">── Languages ────────────────────────────────────────────────────────────────────</text>
+  <text x="28" y="193" font-size="13.5" fill="#7c8fdb">Languages.Programming<tspan fill="#21262d">.....</tspan><tspan fill="#c9d1d9">Python · MATLAB · JavaScript · Julia</tspan></text>
+  <text x="28" y="212" font-size="13.5" fill="#7c8fdb">Languages.Computer<tspan fill="#21262d">........</tspan><tspan fill="#c9d1d9">HTML · CSS · LaTeX · YAML</tspan></text>
+  <text x="28" y="231" font-size="13.5" fill="#7c8fdb">Languages.Real<tspan fill="#21262d">............</tspan><tspan fill="#c9d1d9">Italian · English · German</tspan></text>
+  <text x="28" y="250" font-size="13.5" fill="#7c8fdb">Languages.Dead<tspan fill="#21262d">............</tspan><tspan fill="#f97316">Ancient Greek · Latin · Linear B · </tspan><tspan fill="#8b949e">Cuneiform (learning)</tspan></text>
 
   <!-- hobbies -->
-  <text x="28" y="246" font-size="11" fill="#21262d">── Hobbies ──────────────────────────────────────────────────────────────────────</text>
-  <text x="28" y="263" font-size="12" fill="#7c8fdb">Hobbies.Software<tspan fill="#21262d">..........</tspan><tspan fill="#c9d1d9">Neurotech · Speech ML · NLP</tspan></text>
-  <text x="28" y="280" font-size="12" fill="#7c8fdb">Hobbies.Hardware<tspan fill="#21262d">..........</tspan><tspan fill="#c9d1d9">EEG amplifiers · breadboards · signal generators</tspan></text>
-  <text x="28" y="297" font-size="12" fill="#7c8fdb">Hobbies.TouchGrass<tspan fill="#21262d">.......</tspan><tspan fill="#3fb950">Running · swimming · hiking · scuba diving · painting · cooking</tspan></text>
+  <text x="28" y="272" font-size="11" fill="#21262d">── Hobbies ──────────────────────────────────────────────────────────────────────</text>
+  <text x="28" y="291" font-size="13.5" fill="#7c8fdb">Hobbies.Software<tspan fill="#21262d">..........</tspan><tspan fill="#c9d1d9">Neurotech · Speech ML · NLP</tspan></text>
+  <text x="28" y="310" font-size="13.5" fill="#7c8fdb">Hobbies.Hardware<tspan fill="#21262d">..........</tspan><tspan fill="#c9d1d9">EEG amplifiers · breadboards · signal generators</tspan></text>
+  <text x="28" y="329" font-size="13.5" fill="#7c8fdb">Hobbies.TouchGrass<tspan fill="#21262d">.......</tspan><tspan fill="#3fb950">Running · swimming · hiking · scuba diving · painting · cooking</tspan></text>
 
   <!-- github stats -->
-  <text x="28" y="317" font-size="11" fill="#21262d">── GitHub Stats ─────────────────────────────────────────────────────────────────</text>
+  <text x="28" y="351" font-size="11" fill="#21262d">── GitHub Stats ─────────────────────────────────────────────────────────────────</text>
 
-  <text x="28" y="334" font-size="12" fill="#7c8fdb">Repos<tspan fill="#21262d" id="repo_data_dots"> .... </tspan></text>
-  <text x="244" y="334" font-size="12" fill="#c9d1d9" id="repo_data">14</text>
-  <text x="260" y="334" font-size="12" fill="#8b949e"> {Contributed: </text>
-  <text x="374" y="334" font-size="12" fill="#c9d1d9" id="contrib_data">15</text>
-  <text x="390" y="334" font-size="12" fill="#8b949e">}</text>
+  <text x="28" y="370" font-size="13.5" fill="#7c8fdb">Repos<tspan fill="#21262d" id="repo_data_dots"> .... </tspan></text>
+  <text x="264" y="370" font-size="13.5" fill="#c9d1d9" id="repo_data">14</text>
+  <text x="285" y="370" font-size="13.5" fill="#8b949e"> {Contributed: </text>
+  <text x="405" y="370" font-size="13.5" fill="#c9d1d9" id="contrib_data">15</text>
+  <text x="426" y="370" font-size="13.5" fill="#8b949e">}</text>
 
-  <text x="28" y="351" font-size="12" fill="#7c8fdb">Commits<tspan fill="#21262d" id="commit_data_dots"> ................... </tspan></text>
-  <text x="244" y="351" font-size="12" fill="#c9d1d9" id="commit_data">197</text>
+  <text x="28" y="389" font-size="13.5" fill="#7c8fdb">Commits<tspan fill="#21262d" id="commit_data_dots"> ................... </tspan></text>
+  <text x="264" y="389" font-size="13.5" fill="#c9d1d9" id="commit_data">197</text>
 
-  <text x="28" y="368" font-size="12" fill="#7c8fdb">Stars<tspan fill="#21262d" id="star_data_dots"> ............. </tspan></text>
-  <text x="244" y="368" font-size="12" fill="#c9d1d9" id="star_data">2</text>
+  <text x="28" y="408" font-size="13.5" fill="#7c8fdb">Stars<tspan fill="#21262d" id="star_data_dots"> ............. </tspan></text>
+  <text x="264" y="408" font-size="13.5" fill="#c9d1d9" id="star_data">2</text>
 
-  <text x="28" y="385" font-size="12" fill="#7c8fdb">Followers<tspan fill="#21262d" id="follower_data_dots"> ......... </tspan></text>
-  <text x="244" y="385" font-size="12" fill="#c9d1d9" id="follower_data">3</text>
+  <text x="28" y="427" font-size="13.5" fill="#7c8fdb">Followers<tspan fill="#21262d" id="follower_data_dots"> ......... </tspan></text>
+  <text x="264" y="427" font-size="13.5" fill="#c9d1d9" id="follower_data">3</text>
 
   <!-- LOC: all in one text element so add/del flow after the total naturally -->
-  <text x="28" y="402" font-size="12" fill="#7c8fdb">Lines of Code<tspan fill="#21262d" id="loc_data_dots"></tspan><tspan fill="#c9d1d9"> </tspan><tspan fill="#c9d1d9" id="loc_data">4,571,934</tspan><tspan fill="#c9d1d9"> (</tspan><tspan fill="#3fb950" id="loc_add">4,628,291</tspan><tspan fill="#8b949e">, </tspan><tspan fill="#f85149" id="loc_del">56,357</tspan><tspan fill="#c9d1d9">)</tspan></text>
+  <text x="28" y="446" font-size="13.5" fill="#7c8fdb">Lines of Code<tspan fill="#21262d" id="loc_data_dots"></tspan><tspan fill="#c9d1d9"> </tspan><tspan fill="#c9d1d9" id="loc_data">4,571,934</tspan><tspan fill="#c9d1d9"> (</tspan><tspan fill="#3fb950" id="loc_add">4,628,291</tspan><tspan fill="#8b949e">, </tspan><tspan fill="#f85149" id="loc_del">56,357</tspan><tspan fill="#c9d1d9">)</tspan></text>
 
   <!-- visitor count -->
-  <text x="28" y="419" font-size="12" fill="#7c8fdb">Curious minds visited<tspan fill="#21262d" id="visitor_data_dots"></tspan><tspan fill="#7c8fdb"> </tspan><tspan fill="#c9d1d9" font-size="13" font-weight="700" id="visitor_data">0</tspan></text>
-
-  <!-- swatches -->
-  <rect x="28" y="439" width="16" height="16" rx="2" fill="#7c8fdb"/>
-  <rect x="48" y="439" width="16" height="16" rx="2" fill="#3fb950"/>
-  <rect x="68" y="439" width="16" height="16" rx="2" fill="#f0883e"/>
-  <rect x="88" y="439" width="16" height="16" rx="2" fill="#f85149"/>
-  <rect x="108" y="439" width="16" height="16" rx="2" fill="#79c0ff"/>
-  <rect x="128" y="439" width="16" height="16" rx="2" fill="#c9d1d9"/>
-  <rect x="148" y="439" width="16" height="16" rx="2" fill="#8b949e"/>
-  <rect x="168" y="439" width="16" height="16" rx="2" fill="#1c2128"/>
+  <text x="28" y="465" font-size="13.5" fill="#7c8fdb">Curious minds visited<tspan fill="#21262d" id="visitor_data_dots"></tspan><tspan fill="#7c8fdb"> </tspan><tspan fill="#c9d1d9" font-size="13" font-weight="700" id="visitor_data">0</tspan></text>
 
 </svg>
