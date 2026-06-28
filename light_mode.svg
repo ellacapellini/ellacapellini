@@ -47,7 +47,7 @@
   <text x="390" y="370" font-size="13.5" fill="#57606a">}</text>
 
   <text x="28" y="389" font-size="13.5" fill="#4f46e5">Commits<tspan fill="#c8d1da" id="commit_data_dots"> ................... </tspan></text>
-  <text x="244" y="389" font-size="13.5" fill="#24292f" id="commit_data">198</text>
+  <text x="244" y="389" font-size="13.5" fill="#24292f" id="commit_data">199</text>
 
   <text x="28" y="408" font-size="13.5" fill="#4f46e5">Stars<tspan fill="#c8d1da" id="star_data_dots"> ............. </tspan></text>
   <text x="244" y="408" font-size="13.5" fill="#24292f" id="star_data">2</text>
@@ -56,7 +56,7 @@
   <text x="244" y="427" font-size="13.5" fill="#24292f" id="follower_data">3</text>
 
   <!-- LOC: all in one text element so add/del flow after the total naturally -->
-  <text x="28" y="446" font-size="13.5" fill="#4f46e5">Lines of Code<tspan fill="#c8d1da" id="loc_data_dots"></tspan><tspan fill="#24292f"> </tspan><tspan fill="#24292f" id="loc_data">4,571,924</tspan><tspan fill="#24292f"> (</tspan><tspan fill="#1a7f37" id="loc_add">4,628,325</tspan><tspan fill="#57606a">, </tspan><tspan fill="#cf222e" id="loc_del">56,401</tspan><tspan fill="#24292f">)</tspan></text>
+  <text x="28" y="446" font-size="13.5" fill="#4f46e5">Lines of Code<tspan fill="#c8d1da" id="loc_data_dots"></tspan><tspan fill="#24292f"> </tspan><tspan fill="#24292f" id="loc_data">4,571,913</tspan><tspan fill="#24292f"> (</tspan><tspan fill="#1a7f37" id="loc_add">4,628,359</tspan><tspan fill="#57606a">, </tspan><tspan fill="#cf222e" id="loc_del">56,446</tspan><tspan fill="#24292f">)</tspan></text>
 
   <!-- visitor count -->
   <text x="28" y="465" font-size="13.5" fill="#4f46e5">Curious minds visited<tspan fill="#c8d1da" id="visitor_data_dots"></tspan><tspan fill="#4f46e5"> </tspan><tspan fill="#24292f" font-size="13" font-weight="700" id="visitor_data">0</tspan></text>
