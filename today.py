@@ -6,11 +6,9 @@ from lxml import etree
 import time
 import hashlib
 
-# Fine-grained personal access token with All Repositories access:
-# Account permissions: read:Followers, read:Starring, read:Watching
-# Repository permissions: read:Commit statuses, read:Contents, read:Issues, read:Metadata, read:Pull Requests
-HEADERS = {'authorization': 'token ' + os.environ['ACCESS_TOKEN']}
-USER_NAME = os.environ['USER_NAME']
+
+HEADERS = {'authorization': 'token ' + os.environ['README-Stats-Token ']}
+USER_NAME = os.environ['ellacapellini']
 QUERY_COUNT = {
     'user_getter': 0,
     'follower_getter': 0,

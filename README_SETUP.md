@@ -3,7 +3,7 @@
 ## 1. Create the special profile repository
 
 On GitHub, create a new **public** repository named exactly the same as your
-GitHub username (e.g. `jar-jar-binks-comits/jar-jar-binks-comits`).
+GitHub username (e.g. `ellacapellini/ellacapellini`).
 GitHub treats this as your profile README automatically.
 
 ## 2. Drop in the files
@@ -42,7 +42,7 @@ age_data, age_time = perf_counter(daily_readme, datetime.datetime(YYYY, MM, DD))
 Open `.github/workflows/update_readme.yml` and find:
 
 ```yaml
-USER_NAME: jar-jar-binks-comits
+USER_NAME: ellacapellini
 ```
 
 Replace with your actual GitHub username. Also update `README.md` — find:
