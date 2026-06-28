@@ -19,7 +19,7 @@
 
   <!-- system -->
   <text x="28" y="70" font-size="12" fill="#7c8fdb">OS<tspan fill="#21262d">..................</tspan><tspan fill="#c9d1d9">macOS + Linux</tspan></text>
-  <text x="28" y="87" font-size="12" fill="#7c8fdb">Uptime<tspan fill="#21262d">................</tspan><tspan fill="#c9d1d9" id="age_data">24 years, 4 months, 10 days</tspan></text>
+  <text x="28" y="87" font-size="12" fill="#7c8fdb">Uptime<tspan fill="#21262d">................</tspan><tspan fill="#c9d1d9" id="age_data">24 years, 5 months, 18 days</tspan></text>
   <text x="28" y="104" font-size="12" fill="#7c8fdb">Host<tspan fill="#21262d">..................</tspan><tspan fill="#c9d1d9">UZH · ETH Zürich · U. Oldenburg</tspan></text>
   <text x="28" y="121" font-size="12" fill="#7c8fdb">Kernel<tspan fill="#21262d">................</tspan><tspan fill="#c9d1d9">Researcher</tspan></text>
   <text x="28" y="138" font-size="12" fill="#7c8fdb">IDE<tspan fill="#21262d">...................</tspan><tspan fill="#c9d1d9">VSCode + Neovim</tspan></text>
@@ -40,26 +40,26 @@
   <!-- github stats -->
   <text x="28" y="317" font-size="11" fill="#21262d">── GitHub Stats ─────────────────────────────────────────────────────────────────</text>
 
-  <text x="28" y="334" font-size="12" fill="#7c8fdb">Repos<tspan fill="#21262d" id="repo_data_dots"> ..... </tspan></text>
-  <text x="244" y="334" font-size="12" fill="#c9d1d9" id="repo_data">6</text>
+  <text x="28" y="334" font-size="12" fill="#7c8fdb">Repos<tspan fill="#21262d" id="repo_data_dots"> .... </tspan></text>
+  <text x="244" y="334" font-size="12" fill="#c9d1d9" id="repo_data">14</text>
   <text x="260" y="334" font-size="12" fill="#8b949e"> {Contributed: </text>
-  <text x="374" y="334" font-size="12" fill="#c9d1d9" id="contrib_data">6</text>
+  <text x="374" y="334" font-size="12" fill="#c9d1d9" id="contrib_data">15</text>
   <text x="390" y="334" font-size="12" fill="#8b949e">}</text>
 
   <text x="28" y="351" font-size="12" fill="#7c8fdb">Commits<tspan fill="#21262d" id="commit_data_dots"> ................... </tspan></text>
-  <text x="244" y="351" font-size="12" fill="#c9d1d9" id="commit_data">135</text>
+  <text x="244" y="351" font-size="12" fill="#c9d1d9" id="commit_data">196</text>
 
   <text x="28" y="368" font-size="12" fill="#7c8fdb">Stars<tspan fill="#21262d" id="star_data_dots"> ............. </tspan></text>
   <text x="244" y="368" font-size="12" fill="#c9d1d9" id="star_data">2</text>
 
   <text x="28" y="385" font-size="12" fill="#7c8fdb">Followers<tspan fill="#21262d" id="follower_data_dots"> ......... </tspan></text>
-  <text x="244" y="385" font-size="12" fill="#c9d1d9" id="follower_data">2</text>
+  <text x="244" y="385" font-size="12" fill="#c9d1d9" id="follower_data">3</text>
 
   <!-- LOC: all in one text element so add/del flow after the total naturally -->
-  <text x="28" y="402" font-size="12" fill="#7c8fdb">Lines of Code<tspan fill="#21262d" id="loc_data_dots"></tspan><tspan fill="#c9d1d9"> </tspan><tspan fill="#c9d1d9" id="loc_data">4,325,151</tspan><tspan fill="#c9d1d9"> (</tspan><tspan fill="#3fb950" id="loc_add">4,380,808</tspan><tspan fill="#8b949e">, </tspan><tspan fill="#f85149" id="loc_del">55,657</tspan><tspan fill="#c9d1d9">)</tspan></text>
+  <text x="28" y="402" font-size="12" fill="#7c8fdb">Lines of Code<tspan fill="#21262d" id="loc_data_dots"></tspan><tspan fill="#c9d1d9"> </tspan><tspan fill="#c9d1d9" id="loc_data">4,571,934</tspan><tspan fill="#c9d1d9"> (</tspan><tspan fill="#3fb950" id="loc_add">4,628,290</tspan><tspan fill="#8b949e">, </tspan><tspan fill="#f85149" id="loc_del">56,356</tspan><tspan fill="#c9d1d9">)</tspan></text>
 
   <!-- visitor count -->
-  <text x="28" y="419" font-size="12" fill="#7c8fdb">Curious minds visited<tspan fill="#21262d" id="visitor_data_dots"></tspan><tspan fill="#7c8fdb"> </tspan><tspan fill="#c9d1d9" font-size="13" font-weight="700" id="visitor_data">412</tspan></text>
+  <text x="28" y="419" font-size="12" fill="#7c8fdb">Curious minds visited<tspan fill="#21262d" id="visitor_data_dots"></tspan><tspan fill="#7c8fdb"> </tspan><tspan fill="#c9d1d9" font-size="13" font-weight="700" id="visitor_data">0</tspan></text>
 
   <!-- swatches -->
   <rect x="28" y="439" width="16" height="16" rx="2" fill="#7c8fdb"/>
