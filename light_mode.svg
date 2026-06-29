@@ -19,7 +19,7 @@
 
   <!-- system -->
   <text x="28" y="76" font-size="13.5" fill="#4f46e5">OS<tspan fill="#c8d1da">..................</tspan><tspan fill="#24292f">macOS + Linux</tspan></text>
-  <text x="28" y="95" font-size="13.5" fill="#4f46e5">Uptime<tspan fill="#c8d1da">................</tspan><tspan fill="#24292f" id="age_data">24 years, 5 months, 18 days</tspan></text>
+  <text x="28" y="95" font-size="13.5" fill="#4f46e5">Uptime<tspan fill="#c8d1da">................</tspan><tspan fill="#24292f" id="age_data">24 years, 5 months, 19 days</tspan></text>
   <text x="28" y="114" font-size="13.5" fill="#4f46e5">Host<tspan fill="#c8d1da">..................</tspan><tspan fill="#24292f">UZH · ETH Zürich · U. Oldenburg</tspan></text>
   <text x="28" y="131" font-size="13.5" fill="#4f46e5">Kernel<tspan fill="#c8d1da">................</tspan><tspan fill="#24292f">Researcher</tspan></text>
   <text x="28" y="152" font-size="13.5" fill="#4f46e5">IDE<tspan fill="#c8d1da">...................</tspan><tspan fill="#24292f">VSCode + Neovim</tspan></text>
@@ -47,7 +47,7 @@
   <text x="390" y="370" font-size="13.5" fill="#57606a">}</text>
 
   <text x="28" y="389" font-size="13.5" fill="#4f46e5">Commits<tspan fill="#c8d1da" id="commit_data_dots"> ................... </tspan></text>
-  <text x="244" y="389" font-size="13.5" fill="#24292f" id="commit_data">200</text>
+  <text x="244" y="389" font-size="13.5" fill="#24292f" id="commit_data">204</text>
 
   <text x="28" y="408" font-size="13.5" fill="#4f46e5">Stars<tspan fill="#c8d1da" id="star_data_dots"> ............. </tspan></text>
   <text x="244" y="408" font-size="13.5" fill="#24292f" id="star_data">2</text>
@@ -56,7 +56,7 @@
   <text x="244" y="427" font-size="13.5" fill="#24292f" id="follower_data">3</text>
 
   <!-- LOC: all in one text element so add/del flow after the total naturally -->
-  <text x="28" y="446" font-size="13.5" fill="#4f46e5">Lines of Code<tspan fill="#c8d1da" id="loc_data_dots"></tspan><tspan fill="#24292f"> </tspan><tspan fill="#24292f" id="loc_data">4,571,910</tspan><tspan fill="#24292f"> (</tspan><tspan fill="#1a7f37" id="loc_add">4,628,360</tspan><tspan fill="#57606a">, </tspan><tspan fill="#cf222e" id="loc_del">56,450</tspan><tspan fill="#24292f">)</tspan></text>
+  <text x="28" y="446" font-size="13.5" fill="#4f46e5">Lines of Code<tspan fill="#c8d1da" id="loc_data_dots"></tspan><tspan fill="#24292f"> </tspan><tspan fill="#24292f" id="loc_data">4,572,234</tspan><tspan fill="#24292f"> (</tspan><tspan fill="#1a7f37" id="loc_add">4,628,770</tspan><tspan fill="#57606a">, </tspan><tspan fill="#cf222e" id="loc_del">56,536</tspan><tspan fill="#24292f">)</tspan></text>
 
   <!-- visitor count -->
   <text x="28" y="465" font-size="13.5" fill="#4f46e5">Curious minds visited<tspan fill="#c8d1da" id="visitor_data_dots"></tspan><tspan fill="#4f46e5"> </tspan><tspan fill="#24292f" font-size="13" font-weight="700" id="visitor_data">0</tspan></text>
