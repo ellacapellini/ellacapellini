@@ -19,7 +19,7 @@
 
   <!-- system -->
   <text x="28" y="76" font-size="13.5" fill="#4f46e5">OS<tspan fill="#c8d1da">..................</tspan><tspan fill="#24292f">macOS + Linux</tspan></text>
-  <text x="28" y="95" font-size="13.5" fill="#4f46e5">Uptime<tspan fill="#c8d1da">................</tspan><tspan fill="#24292f" id="age_data">24 years, 6 months, 6 days</tspan></text>
+  <text x="28" y="95" font-size="13.5" fill="#4f46e5">Uptime<tspan fill="#c8d1da">................</tspan><tspan fill="#24292f" id="age_data">24 years, 6 months, 7 days</tspan></text>
   <text x="28" y="114" font-size="13.5" fill="#4f46e5">Host<tspan fill="#c8d1da">..................</tspan><tspan fill="#24292f">UZH · ETH Zürich · U. Oldenburg</tspan></text>
   <text x="28" y="131" font-size="13.5" fill="#4f46e5">Kernel<tspan fill="#c8d1da">................</tspan><tspan fill="#24292f">Researcher</tspan></text>
   <text x="28" y="152" font-size="13.5" fill="#4f46e5">IDE<tspan fill="#c8d1da">...................</tspan><tspan fill="#24292f">VSCode + Neovim</tspan></text>
@@ -43,7 +43,7 @@
   <text x="28" y="370" font-size="13.5" fill="#4f46e5">Repos<tspan fill="#c8d1da" id="repo_data_dots"> .... </tspan></text>
   <text x="244" y="370" font-size="13.5" fill="#24292f" id="repo_data">14</text>
   <text x="260" y="370" font-size="13.5" fill="#57606a"> {Contributed: </text>
-  <text x="374" y="370" font-size="13.5" fill="#24292f" id="contrib_data">15</text>
+  <text x="374" y="370" font-size="13.5" fill="#24292f" id="contrib_data">16</text>
   <text x="390" y="370" font-size="13.5" fill="#57606a">}</text>
 
   <text x="28" y="389" font-size="13.5" fill="#4f46e5">Commits<tspan fill="#c8d1da" id="commit_data_dots"> ................... </tspan></text>
