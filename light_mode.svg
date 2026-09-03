@@ -19,7 +19,7 @@
 
   <!-- system -->
   <text x="28" y="76" font-size="13.5" fill="#4f46e5">OS<tspan fill="#c8d1da">..................</tspan><tspan fill="#24292f">macOS + Linux</tspan></text>
-  <text x="28" y="95" font-size="13.5" fill="#4f46e5">Uptime<tspan fill="#c8d1da">................</tspan><tspan fill="#24292f" id="age_data">24 years, 7 months, 23 days</tspan></text>
+  <text x="28" y="95" font-size="13.5" fill="#4f46e5">Uptime<tspan fill="#c8d1da">................</tspan><tspan fill="#24292f" id="age_data">24 years, 7 months, 24 days</tspan></text>
   <text x="28" y="114" font-size="13.5" fill="#4f46e5">Host<tspan fill="#c8d1da">..................</tspan><tspan fill="#24292f">UZH · ETH Zürich · U. Oldenburg</tspan></text>
   <text x="28" y="131" font-size="13.5" fill="#4f46e5">Kernel<tspan fill="#c8d1da">................</tspan><tspan fill="#24292f">Researcher</tspan></text>
   <text x="28" y="152" font-size="13.5" fill="#4f46e5">IDE<tspan fill="#c8d1da">...................</tspan><tspan fill="#24292f">VSCode + Neovim</tspan></text>
@@ -53,7 +53,7 @@
   <text x="244" y="408" font-size="13.5" fill="#24292f" id="star_data">2</text>
 
   <text x="28" y="427" font-size="13.5" fill="#4f46e5">Followers<tspan fill="#c8d1da" id="follower_data_dots"> ......... </tspan></text>
-  <text x="244" y="427" font-size="13.5" fill="#24292f" id="follower_data">4</text>
+  <text x="244" y="427" font-size="13.5" fill="#24292f" id="follower_data">3</text>
 
   <!-- LOC: all in one text element so add/del flow after the total naturally -->
   <text x="28" y="446" font-size="13.5" fill="#4f46e5">Lines of Code<tspan fill="#c8d1da" id="loc_data_dots"></tspan><tspan fill="#24292f"> </tspan><tspan fill="#24292f" id="loc_data">4,588,985</tspan><tspan fill="#24292f"> (</tspan><tspan fill="#1a7f37" id="loc_add">4,646,059</tspan><tspan fill="#57606a">, </tspan><tspan fill="#cf222e" id="loc_del">57,074</tspan><tspan fill="#24292f">)</tspan></text>
