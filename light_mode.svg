@@ -33,7 +33,7 @@
 
   <!-- hobbies -->
   <text x="28" y="272" font-size="11" fill="#d0d7de">── Hobbies ──────────────────────────────────────────────────────────────────────</text>
-  <text x="28" y="291" font-size="13.5" fill="#4f46e5">Hobbies.Software<tspan fill="#c8d1da">..........</tspan><tspan fill="#24292f">Bayesian Modelling · ML · NLP · AI ·Neuroinformatics</tspan></text>
+  <text x="28" y="291" font-size="13.5" fill="#4f46e5">Hobbies.Software<tspan fill="#c8d1da">..........</tspan><tspan fill="#24292f">Bayesian Modelling · ML · NLP · AI · Neuroinformatics</tspan></text>
   <text x="28" y="310" font-size="13.5" fill="#4f46e5">Hobbies.Hardware<tspan fill="#c8d1da">..........</tspan><tspan fill="#24292f">EEG · iEEG · Neurotechnology · Signal Processing · Computing</tspan></text>
   <text x="28" y="329" font-size="13.5" fill="#4f46e5">Hobbies.TouchGrass<tspan fill="#c8d1da">.......</tspan><tspan fill="#1a7f37">Running · swimming · climbing · hiking · painting · cooking</tspan></text>
 
