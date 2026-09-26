@@ -34,13 +34,16 @@ def format_plural(unit):
     return 's' if unit != 1 else ''
 
 
-def simple_request(func_name, query, variables):
+def simple_request(func_name, query, variables, retries=0):
     request = requests.post(
         'https://api.github.com/graphql',
         json={'query': query, 'variables': variables},
         headers=HEADERS)
     if request.status_code == 200:
         return request
+    if request.status_code in (502, 503, 504) and retries < 5:
+        time.sleep(2 ** retries)  # 1s, 2s, 4s, 8s, 16s
+        return simple_request(func_name, query, variables, retries + 1)
     raise Exception(func_name, ' has failed with a', request.status_code, request.text, QUERY_COUNT)
 
 
@@ -94,7 +97,7 @@ def graph_repos_stars(count_type, owner_affiliation, cursor=None, add_loc=0, del
             return stars_counter(request.json()['data']['user']['repositories']['edges'])
 
 
-def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, deletion_total=0, my_commits=0, cursor=None):
+def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, deletion_total=0, my_commits=0, cursor=None, retries=0):
     query_count('recursive_loc')
     query = '''
     query ($repo_name: String!, $owner: String!, $cursor: String) {
@@ -141,6 +144,11 @@ def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, delet
                 addition_total, deletion_total, my_commits)
         else:
             return 0
+    if request.status_code in (502, 503, 504) and retries < 5:
+        time.sleep(2 ** retries)  # 1s, 2s, 4s, 8s, 16s
+        return recursive_loc(owner, repo_name, data, cache_comment,
+                             addition_total, deletion_total, my_commits,
+                             cursor, retries + 1)
     force_close_file(data, cache_comment)
     if request.status_code == 403:
         raise Exception('Too many requests in a short amount of time!\nYou\'ve hit the non-documented anti-abuse limit!')
