@@ -34,14 +34,34 @@ def format_plural(unit):
     return 's' if unit != 1 else ''
 
 
+GRAPHQL_URL = 'https://api.github.com/graphql'
+RETRY_STATUSES = (403, 429, 500, 502, 503, 504)
+
+
+def post_with_retry(func_name, query, variables, attempts=5):
+    """POST a GraphQL query, retrying on transient errors (5xx, rate limits, timeouts)."""
+    last_error = None
+    for attempt in range(attempts):
+        try:
+            request = requests.post(GRAPHQL_URL, json={'query': query, 'variables': variables},
+                                    headers=HEADERS, timeout=60)
+        except requests.RequestException as error:
+            last_error = repr(error)
+        else:
+            if request.status_code == 200:
+                body = request.json()
+                if body.get('errors') and not body.get('data'):
+                    raise Exception(func_name, 'GraphQL errors:', body['errors'])
+                return request
+            last_error = '{} {}'.format(request.status_code, request.text[:500])
+            if request.status_code not in RETRY_STATUSES:
+                break
+        time.sleep(2 ** attempt)
+    raise Exception(func_name, 'has failed after retries:', last_error, QUERY_COUNT)
+
+
 def simple_request(func_name, query, variables):
-    request = requests.post(
-        'https://api.github.com/graphql',
-        json={'query': query, 'variables': variables},
-        headers=HEADERS)
-    if request.status_code == 200:
-        return request
-    raise Exception(func_name, ' has failed with a', request.status_code, request.text, QUERY_COUNT)
+    return post_with_retry(func_name, query, variables)
 
 
 def graph_commits(start_date, end_date):
@@ -129,22 +149,18 @@ def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, delet
         }
     }'''
     variables = {'repo_name': repo_name, 'owner': owner, 'cursor': cursor}
-    request = requests.post(
-        'https://api.github.com/graphql',
-        json={'query': query, 'variables': variables},
-        headers=HEADERS)
-    if request.status_code == 200:
-        if request.json()['data']['repository']['defaultBranchRef'] is not None:
-            return loc_counter_one_repo(
-                owner, repo_name, data, cache_comment,
-                request.json()['data']['repository']['defaultBranchRef']['target']['history'],
-                addition_total, deletion_total, my_commits)
-        else:
-            return 0
-    force_close_file(data, cache_comment)
-    if request.status_code == 403:
-        raise Exception('Too many requests in a short amount of time!\nYou\'ve hit the non-documented anti-abuse limit!')
-    raise Exception('recursive_loc() has failed with a', request.status_code, request.text, QUERY_COUNT)
+    try:
+        request = post_with_retry('recursive_loc', query, variables)
+    except Exception:
+        force_close_file(data, cache_comment)   # keep partial cache so the next run resumes
+        raise
+    repository = request.json()['data']['repository']
+    if repository is not None and repository['defaultBranchRef'] is not None:
+        return loc_counter_one_repo(
+            owner, repo_name, data, cache_comment,
+            repository['defaultBranchRef']['target']['history'],
+            addition_total, deletion_total, my_commits)
+    return 0
 
 
 def loc_counter_one_repo(owner, repo_name, data, cache_comment, history, addition_total, deletion_total, my_commits):
@@ -277,7 +293,10 @@ def stars_counter(data):
 
 def svg_overwrite(filename, age_data, commit_data, star_data, repo_data,
                   contrib_data, follower_data, loc_data):
-    tree = etree.parse(filename)
+    try:
+        tree = etree.parse(filename)
+    except etree.XMLSyntaxError as error:
+        raise SystemExit('{} is not valid XML ({}). Fix the SVG, then re-run.'.format(filename, error))
     root = tree.getroot()
     justify_format(root, 'commit_data',   commit_data,   22)
     justify_format(root, 'star_data',     star_data,     14)
@@ -351,7 +370,6 @@ def follower_getter(username):
 
 
 def query_count(funct_id):
-    global QUERY_COUNT
     QUERY_COUNT[funct_id] += 1
 
 
