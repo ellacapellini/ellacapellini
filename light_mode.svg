@@ -47,8 +47,8 @@
   <text x="390" y="370" font-size="13.5" fill="#57606a">}</text>
 
   <text x="28" y="389" font-size="13.5" fill="#4f46e5">Commits<tspan fill="#c8d1da" id="commit_data_dots"> ................... </tspan></text>
-  <text x="244" y="389" font-size="13.5" fill="#24292f" id="commit_data">314</text>
+  <text x="244" y="389" font-size="13.5" fill="#24292f" id="commit_data">317</text>
 
   <!-- LOC: all in one text element so add/del flow after the total naturally -->
-  <text x="28" y="416" font-size="13.5" fill="#4f46e5">Lines of Code<tspan fill="#c8d1da" id="loc_data_dots"></tspan><tspan fill="#24292f"> </tspan><tspan fill="#24292f" id="loc_data">4,666,214</tspan><tspan fill="#24292f"> (</tspan><tspan fill="#1a7f37" id="loc_add">4,730,909</tspan><tspan fill="#57606a">, </tspan><tspan fill="#cf222e" id="loc_del">64,695</tspan><tspan fill="#24292f">)</tspan></text>
+  <text x="28" y="416" font-size="13.5" fill="#4f46e5">Lines of Code<tspan fill="#c8d1da" id="loc_data_dots"></tspan><tspan fill="#24292f"> </tspan><tspan fill="#24292f" id="loc_data">4,666,228</tspan><tspan fill="#24292f"> (</tspan><tspan fill="#1a7f37" id="loc_add">4,730,995</tspan><tspan fill="#57606a">, </tspan><tspan fill="#cf222e" id="loc_del">64,767</tspan><tspan fill="#24292f">)</tspan></text>
 </svg>
