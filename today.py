@@ -34,16 +34,13 @@ def format_plural(unit):
     return 's' if unit != 1 else ''
 
 
-def simple_request(func_name, query, variables, retries=0):
+def simple_request(func_name, query, variables):
     request = requests.post(
         'https://api.github.com/graphql',
         json={'query': query, 'variables': variables},
         headers=HEADERS)
     if request.status_code == 200:
         return request
-    if request.status_code in (502, 503, 504) and retries < 5:
-        time.sleep(2 ** retries)  # 1s, 2s, 4s, 8s, 16s
-        return simple_request(func_name, query, variables, retries + 1)
     raise Exception(func_name, ' has failed with a', request.status_code, request.text, QUERY_COUNT)
 
 
@@ -97,7 +94,7 @@ def graph_repos_stars(count_type, owner_affiliation, cursor=None, add_loc=0, del
             return stars_counter(request.json()['data']['user']['repositories']['edges'])
 
 
-def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, deletion_total=0, my_commits=0, cursor=None, retries=0):
+def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, deletion_total=0, my_commits=0, cursor=None):
     query_count('recursive_loc')
     query = '''
     query ($repo_name: String!, $owner: String!, $cursor: String) {
@@ -144,11 +141,6 @@ def recursive_loc(owner, repo_name, data, cache_comment, addition_total=0, delet
                 addition_total, deletion_total, my_commits)
         else:
             return 0
-    if request.status_code in (502, 503, 504) and retries < 5:
-        time.sleep(2 ** retries)  # 1s, 2s, 4s, 8s, 16s
-        return recursive_loc(owner, repo_name, data, cache_comment,
-                             addition_total, deletion_total, my_commits,
-                             cursor, retries + 1)
     force_close_file(data, cache_comment)
     if request.status_code == 403:
         raise Exception('Too many requests in a short amount of time!\nYou\'ve hit the non-documented anti-abuse limit!')
@@ -283,27 +275,8 @@ def stars_counter(data):
     return total_stars
 
 
-def visitor_getter(username):
-    try:
-        url = f'https://komarev.com/ghpvc/?username={username}&style=flat-square'
-        resp = requests.get(url, timeout=10)
-        if resp.status_code != 200:
-            return 0
-        root = etree.fromstring(resp.content)
-        texts = root.findall('.//{http://www.w3.org/2000/svg}text')
-        if not texts:
-            texts = root.findall('.//text')
-        for t in reversed(texts):
-            val = (t.text or '').strip().replace(',', '')
-            if val.isdigit():
-                return int(val)
-        return 0
-    except Exception:
-        return 0
-
-
 def svg_overwrite(filename, age_data, commit_data, star_data, repo_data,
-                  contrib_data, follower_data, loc_data, visitor_data):
+                  contrib_data, follower_data, loc_data):
     tree = etree.parse(filename)
     root = tree.getroot()
     justify_format(root, 'commit_data',   commit_data,   22)
@@ -315,7 +288,6 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data,
     justify_format(root, 'loc_add',       loc_data[0])
     justify_format(root, 'loc_del',       loc_data[1],    7)
     justify_format(root, 'age_data',      age_data)
-    justify_format(root, 'visitor_data',  visitor_data)
     tree.write(filename, encoding='utf-8', xml_declaration=True)
 
 
@@ -423,13 +395,10 @@ if __name__ == '__main__':
     for index in range(len(total_loc) - 1):
         total_loc[index] = '{:,}'.format(total_loc[index])
 
-    visitor_data, visitor_time = perf_counter(visitor_getter, USER_NAME)
-    formatter('visitor count', visitor_time)
-
     svg_overwrite('dark_mode.svg',  age_data, commit_data, star_data, repo_data,
-                  contrib_data, follower_data, total_loc[:-1], visitor_data)
+                  contrib_data, follower_data, total_loc[:-1])
     svg_overwrite('light_mode.svg', age_data, commit_data, star_data, repo_data,
-                  contrib_data, follower_data, total_loc[:-1], visitor_data)
+                  contrib_data, follower_data, total_loc[:-1])
 
     print('\033[F\033[F\033[F\033[F\033[F\033[F\033[F\033[F',
           '{:<21}'.format('Total function time:'),
