@@ -51,3 +51,7 @@
 
   <!-- LOC: all in one text element so add/del flow after the total naturally -->
   <text x="28" y="416" font-size="13.5" fill="#4f46e5">Lines of Code<tspan fill="#c8d1da" id="loc_data_dots"></tspan><tspan fill="#24292f"> </tspan><tspan fill="#24292f" id="loc_data">4,664,374</tspan><tspan fill="#24292f"> (</tspan><tspan fill="#1a7f37" id="loc_add">4,728,987</tspan><tspan fill="#57606a">, </tspan><tspan fill="#cf222e" id="loc_del">64,613</tspan><tspan fill="#24292f">)</tspan></text>
+
+  <!-- visitor count -->
+  <text x="28" y="435" font-size="13.5" fill="#4f46e5">Curious minds visited<tspan fill="#c8d1da" id="visitor_data_dots"></tspan><tspan fill="#4f46e5"> </tspan><tspan fill="#24292f" font-size="13" font-weight="700" id="visitor_data">0</tspan></text>
+</svg>
